@@ -1,0 +1,73 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    padding:20px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.form{
+    display:flex;
+    gap:10px;
+    margin-bottom:30px;
+}
+
+.form input,
+.form select{
+    padding:10px;
+    flex:1;
+}
+
+button{
+    padding:10px 15px;
+    cursor:pointer;
+}
+
+section{
+    margin-bottom:30px;
+}
+
+.task{
+    background:white;
+    padding:12px;
+    margin-bottom:10px;
+    border-radius:5px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.task.completed{
+    background:#d4edda;
+    text-decoration:line-through;
+}
+
+.actions button{
+    margin-left:5px;
+}
+
+.high{
+    color:red;
+}
+
+.medium{
+    color:orange;
+}
+
+.low{
+    color:green;
+}

@@ -1,73 +1,208 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
 
-body{
-    background:#f4f4f4;
-    padding:20px;
+body {
+    font-family: "Inter", sans-serif;
 }
 
-.container{
-    max-width:900px;
-    margin:auto;
+/* Utility */
+.container {
+    padding: 0px 60px;
 }
 
-h1{
-    text-align:center;
-    margin-bottom:20px;
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0px 20px;
+    }
 }
 
-.form{
-    display:flex;
-    gap:10px;
-    margin-bottom:30px;
+/* Section 1 */
+.heading {
+    font-size:125px;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 0px;
 }
 
-.form input,
-.form select{
-    padding:10px;
-    flex:1;
+.input_field {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
-button{
-    padding:10px 15px;
-    cursor:pointer;
+.task_detail {
+    width: 36%;
+    height: 63px;
+    padding: 10px;
+    min-width: 280px;
+    border: 2px solid black;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
 }
 
-section{
-    margin-bottom:30px;
+#priority {
+    width: 22%;
+    height: 63px;
+    padding: 10px;
+    min-width: 135px;
+    border: 2px solid black;
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "Inter", sans-serif;
 }
 
-.task{
-    background:white;
-    padding:12px;
-    margin-bottom:10px;
-    border-radius:5px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+button {
+    width: 14%;
+    height: 63px;
+    padding: 10px;
+    min-width: 120px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
 }
 
-.task.completed{
-    background:#d4edda;
-    text-decoration:line-through;
+.date {
+    width: 25%;
+    height: 63px;
+    padding: 10px;
+    min-width: 135px;
+    border: 2px solid black;
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
 }
 
-.actions button{
-    margin-left:5px;
+@media screen and (max-width: 920px) {
+    .heading {
+        font-size: 32px;
+        margin: 20px 0px;
+    }
+    .task_detail {
+        width: 50%;
+    }
+    button {
+        width: 100%;
+    }
 }
 
-.high{
-    color:red;
+@media screen and (max-width: 622px) {
+    #priority {
+        width: 49.1%;
+        height: 43px;
+        font-size: 18px;
+    }
+    .task_detail {
+        width: 100%;
+        height: 43px;
+        font-size: 18px;
+    }
+    .date {
+        width: 49.1%;
+        height: 43px;
+        font-size: 18px;
+    }
+    button {
+        height: 43px;
+        font-size: 18px;
+    }
 }
 
-.medium{
-    color:orange;
+/* Sections 2, 3, 4 */
+.heading_small {
+    font-size: 32px;
+    margin: 40px 0px;
+    font-weight: 600;
 }
 
-.low{
-    color:green;
+.Today_box_container1,
+.Today_box_container2,
+.Today_box_container3 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box_body1,
+.box_body2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 15px;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.box_body2 {
+    border: 2px solid black;
+}
+
+.box_body1 {
+    background-color: black;
+    color: white;
+}
+
+.body_item1 {
+    width: 300px;
+}
+
+.body_item3 {
+    width: 95px;
+}
+
+.body_item4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.body_item4 span {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.body_item4 img {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+}
+
+.complete_todo {
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 622px) {
+    .box_body1,
+    .box_body2 {
+        font-size: 18px;
+    }
+
+    .body_item1 {
+        width: 100%;
+    }
+
+    .body_item3 {
+        width: 80px;
+    }
+
+    .heading_small {
+        font-size: 24px;
+        margin: 40px 0px;
+        font-weight: 600;
+    }
 }
